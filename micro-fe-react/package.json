@@ -1,0 +1,28 @@
+{
+  "name": "micro-fe-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts": "3.0.0",
+    "typescript": "^3.5.2",
+    "web-react-components": "^1.4.2"
+  },
+  "scripts": {
+    "start": "npm run build && serve -l 5002 dist",
+    "build": "webpack --mode development --display-error-details"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "devDependencies": {
+    "@types/react": "^16.8.23",
+    "@types/react-dom": "^16.8.4",
+    "css-loader": "^3.0.0",
+    "style-loader": "^0.23.1",
+    "ts-loader": "^6.0.4",
+    "webpack": "^4.35.2",
+    "webpack-cli": "^3.3.5"
+  }
+}

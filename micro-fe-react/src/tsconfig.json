@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "module": "esnext",
+        "moduleResolution": "node",
+        "target": "es6",
+        "outDir": "configViewer",
+        "lib": [
+            "es6",
+            "dom"
+        ],
+        "jsx": "react",
+        "sourceMap": true,
+        "rootDir": "..",
+    },
+    "exclude": [
+        "node_modules"
+    ]
+}
