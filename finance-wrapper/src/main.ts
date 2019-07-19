@@ -1,24 +1,17 @@
-/*
- * Entry point of the application.
- * Only platform bootstrapping code should be here.
- * For app-specific initialization, use `app/app.component.ts`.
- */
+import { enableProdMode } from "@angular/core";
+import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
+import { environment } from "./environments/environment";
 
-import { enableProdMode } from '@angular/core';
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
-import { AppModule } from '@app/app.module';
-import { environment } from '@env/environment';
-import { hmrBootstrap } from './hmr';
+import { AppModule } from "./app/app.module";
 
 if (environment.production) {
   enableProdMode();
 }
 
-const bootstrap = () => platformBrowserDynamic().bootstrapModule(AppModule);
+platformBrowserDynamic().bootstrapModule(AppModule);
 
-if (environment.hmr) {
-  hmrBootstrap(module, bootstrap);
-} else {
-  bootstrap().catch(err => console.error(err));
-}
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/

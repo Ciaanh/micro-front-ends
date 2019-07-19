@@ -1,13 +1,12 @@
-import { Routes, Route } from '@angular/router';
+import { Routes, Route } from "@angular/router";
 
-import { AuthenticationGuard } from '@app/core';
-import { ShellComponent } from './shell.component';
+import { AuthenticationGuard } from "@app/core";
+import { ShellComponent } from "./shell.component";
 
 /**
  * Provides helper methods to create routes.
  */
 export class Shell {
-
   /**
    * Creates routes using the shell component and authentication.
    * @param routes The routes to add.
@@ -15,7 +14,7 @@ export class Shell {
    */
   static childRoutes(routes: Routes): Route {
     return {
-      path: '',
+      path: "",
       component: ShellComponent,
       children: routes,
       canActivate: [AuthenticationGuard],

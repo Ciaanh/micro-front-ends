@@ -1,37 +1,25 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
-import { TranslateModule } from '@ngx-translate/core';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { NgModule } from "@angular/core";
+import { BrowserModule } from "@angular/platform-browser";
+import { RouterModule } from "@angular/router";
+import { ReactiveFormsModule } from "@angular/forms";
 
-import { CoreModule } from '@app/core';
-import { SharedModule } from '@app/shared';
-import { HomeModule } from './home/home.module';
-import { ShellModule } from './shell/shell.module';
-import { AboutModule } from './about/about.module';
-import { LoginModule } from './login/login.module';
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from "./app.component";
+import { TopBarComponent } from "./top-bar/top-bar.component";
+import { ProductListComponent } from "./product-list/product-list.component";
 
 @NgModule({
   imports: [
     BrowserModule,
-    FormsModule,
-    HttpClientModule,
-    TranslateModule.forRoot(),
-    NgbModule,
-    CoreModule,
-    SharedModule,
-    ShellModule,
-    HomeModule,
-    AboutModule,
-    LoginModule,
-    AppRoutingModule // must be imported as the last module as it contains the fallback route
+    ReactiveFormsModule,
+    RouterModule.forRoot([{ path: "", component: ProductListComponent }])
   ],
-  declarations: [AppComponent],
-  providers: [
-  ],
+  declarations: [AppComponent, TopBarComponent, ProductListComponent],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}
+
+/*
+Copyright Google LLC. All Rights Reserved.
+Use of this source code is governed by an MIT-style license that
+can be found in the LICENSE file at http://angular.io/license
+*/
