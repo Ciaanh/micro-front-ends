@@ -23,13 +23,8 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": false,
-            "assets": [
-              "src/favicon.ico",
-              "src/images"
-            ],
-            "styles": [
-              "src/styles.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/images"],
+            "styles": ["src/styles.scss"],
             "scripts": []
           },
           "configurations": {
@@ -75,8 +70,8 @@
             }
           }
         }
-        
       }
-    }},
+    }
+  },
   "defaultProject": "finance-wrapper"
 }
