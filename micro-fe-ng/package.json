@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run build && serve -l 5001 dist/micro-fe-ng",
-    "build": "ng build --prod --output-hashing none --single-bundle true",
+    "build": "ng build --prod --output-hashing none",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -19,11 +19,11 @@
     "@angular/platform-browser": "~8.2.3",
     "@angular/platform-browser-dynamic": "~8.2.3",
     "@angular/router": "~8.2.3",
+    "@webcomponents/webcomponentsjs": "^2.2.10",
     "core-js": "^3.2.1",
     "node-sass": "^4.12.0",
     "rxjs": "~6.5.2",
-    "tslib": "^1.10.0",
-    "zone.js": "~0.10.2"
+    "tslib": "^1.10.0"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.0",
