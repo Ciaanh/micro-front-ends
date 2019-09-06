@@ -1,85 +1,76 @@
 <div class="container">
-  <div class="wrapper-navbar wrapper-navbar--border-bottom">
-    <nav class="navbar">
-      <ul class="first-level ml-2">
-        <li class="item active"><a href="#" class="link">Nous contacter</a></li>
-        <li class="item active border-color-3">
-          <a href="#" class="link">Nos assurances</a>
-        </li>
-        <li class="item"><a href="#" class="link">Fonctionnement</a></li>
-        <li class="item"><a href="#" class="link">FAQ</a></li>
-        <li class="item"><a href="#" class="link">Nous rejoindre</a></li>
-      </ul>
-    </nav>
-  </div>
+  
+  <div class="card">
 
-  <div class="row">
-    <div class="col">
-      <nav class="navbar navbar-light bg-light">
-        <span class="navbar-brand mb-0 h1"> Welcome to {{ title }}! </span>
+    <div class="wrapper-navbar wrapper-navbar--border-bottom">
+      <nav class="navbar">
+        <ul class="first-level ml-2">
+          <li class="item active"><a href="#" class="link">Nous contacter</a></li>
+          <li class="item active border-color-3"><a href="#" class="link">Nos assurances</a></li>
+          <li class="item"><a href="#" class="link">Fonctionnement</a></li>
+          <li class="item"><a href="#" class="link">FAQ</a></li>
+          <li class="item"><a href="#" class="link">Nous rejoindre</a></li>
+        </ul>
       </nav>
     </div>
-  </div>
 
-  <div class="card">
-    <div class="row">
-      <div class="col">
-        <div class="alert alert-info" role="alert">
-          <h4 class="alert-heading">What is your name?</h4>
-          <div class="form-group">
-            <input
-              type="text"
-              onClick="this.setSelectionRange(0, this.value.length)"
-              class="form-control"
-              id="yourName"
-              aria-describedby="yourName"
-              placeholder="Your name"
-              value="Chris"
-            />
-            <small id="emailHelp" class="form-text text-muted"
-              >Enter your name above then click the button below to tell the
-              components.</small
-            >
-            <input type="checkbox" id="isReactButtonDisabled" /> Disable React
-            event<br />
+    
+
+    <div class="card  card--border box-shadow">
+
+      <div class="row">
+        <div class="col">
+            <div class="title-1"> Welcome to {{ title }}! </div>
+        </div>
+      </div>
+
+      <br/>
+
+      <div class="row">
+        <div class="col">
+
+          <div class="fieldset type-text">
+              <div class="wrapper-input">
+                  <label class="label">What is your name?</label>
+              </div>
+              <div class="wrapper-input">
+                  <input type="text"
+                    [value]="username"
+                    (input)="username = $event.target.value"
+                  />
+              </div>
+          </div> 
+
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header">Angular</h5>
+            <ng-el name="{{username}}" (helloEvt)="helloEvent('Angular')"></ng-el>
           </div>
-          <button
-            type="submit"
-            class="btn btn-primary"
-            onclick="tellComponents()"
-          >
-            Tell the components
-          </button>
+        </div>
+
+        <div class="col">
+          <div class="card">
+            <h5 class="card-header">React</h5>
+            <react-el name="{{username}}" (helloEvt)="helloEvent('React')"></react-el>
+          </div>
         </div>
       </div>
+
+      <div class="row">
+        <div class="col">
+          <div class="alert alert-dark" role="alert">
+            <h4 class="alert-heading">Console</h4>
+            <pre>{{messages}}</pre>
+          </div>
+        </div>
+      </div>
+
     </div>
 
-    <div class="row">
-      <div class="col">
-        <div class="card">
-          <h5 class="card-header">Angular</h5>
-          <ng-el name="toto" (helloEvt)="helloEvent('Angular')"></ng-el>
-        </div>
-      </div>
-      <div class="col">
-        <div class="card">
-          <h5 class="card-header">React</h5>
-          <react-el
-            name="toto"
-            (onButtonClick)="helloEvent('React')"
-          ></react-el>
-        </div>
-      </div>
-    </div>
-    <div class="row console">
-      <div class="col">
-        <div class="alert alert-dark" role="alert">
-          <h4 class="alert-heading">Console</h4>
-          <div id="messages"></div>
-        </div>
-      </div>
-    </div>
   </div>
-</div>
 
-<!-- <router-outlet></router-outlet> -->
+</div>

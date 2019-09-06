@@ -20,5 +20,6 @@ register(
   // new instance of `Event` or `CustomEvent`
   {
     onButtonClick: e => new Event("helloEvt", { bubbles: true })
-  }
+  },
+  { useShadowDOM: false }
 );

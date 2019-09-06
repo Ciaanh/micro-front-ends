@@ -4,7 +4,7 @@ import { Component, OnInit, ViewEncapsulation, Input, Output, EventEmitter } fro
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
-  encapsulation: ViewEncapsulation.None // <- this allows CSS to bleed to this component from parent app
+  encapsulation: ViewEncapsulation.None // encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AppComponent implements OnInit {
 

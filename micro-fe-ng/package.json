@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "npm run build && serve -l 5001 dist/micro-fe-ng",
-    "build": "ng build --prod --output-hashing none",
+    "build": "ng build --prod --output-hashing none --single-bundle true",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

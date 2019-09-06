@@ -6,9 +6,12 @@ import { Component } from "@angular/core";
   styleUrls: ["./app.component.scss"]
 })
 export class AppComponent {
+  messages = "";
   title = "finance-wrapper";
+  username = "John Doe";
 
   helloEvent(who: string) {
     console.log(who);
+    this.messages += "> " + who + "\n";
   }
 }
